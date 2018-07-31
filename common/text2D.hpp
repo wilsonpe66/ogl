@@ -1,8 +1,7 @@
-#ifndef TEXT2D_HPP
-#define TEXT2D_HPP
+#pragma once
 
-void initText2D(const char * texturePath);
-void printText2D(const char * text, int x, int y, int size);
+#include <string_view>
+
+void initText2D(std::string_view texturePath);
+void printText2D(std::string_view text, int x, int y, int size);
 void cleanupText2D();
-
-#endif

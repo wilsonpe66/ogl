@@ -1,11 +1,10 @@
-#ifndef QUATERNION_UTILS_H
-#define QUATERNION_UTILS_H
+#pragma once
 
-quat RotationBetweenVectors(vec3 start, vec3 dest);
+#include "gl_base.h"
+#include <glm/gtc/quaternion.hpp>
 
-quat LookAt(vec3 direction, vec3 desiredUp);
+glm::quat RotationBetweenVectors(glm::vec3 start, glm::vec3 dest);
 
-quat RotateTowards(quat q1, quat q2, float maxAngle);
+glm::quat LookAt(glm::vec3 direction, glm::vec3 desiredUp);
 
-
-#endif // QUATERNION_UTILS_H
+glm::quat RotateTowards(glm::quat q1, glm::quat q2, float maxAngle);

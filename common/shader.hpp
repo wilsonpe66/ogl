@@ -1,6 +1,7 @@
-#ifndef SHADER_HPP
-#define SHADER_HPP
+#pragma once
+#include <string_view>
 
-GLuint LoadShaders(const char * vertex_file_path,const char * fragment_file_path);
+using GLuint = unsigned int;
 
-#endif
+GLuint LoadShaders(std::string_view vertex_file_path,
+                   std::string_view fragment_file_path);
